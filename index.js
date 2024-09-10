@@ -57,12 +57,13 @@ inquirer
 
     // checking text length is no more than 3 characters
     if (answers.Text.length > 3 || 0) {
-      console.log("Must enter a value of no more than 3 characters");
+    console.log("Must enter a value of no more than 3 characters");
       questions();
     } else {
       fs.writeFile("logo.svg", svgLogo, function (err) {
         if (err) {
           console.log(err)
+          
         } else {
           console.log("Successfully created file!")
         }
@@ -71,5 +72,5 @@ inquirer
   });
 };
 
-questions()
+questions();
 
